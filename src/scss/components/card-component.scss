@@ -1,0 +1,14 @@
+card-overview {
+  display: inline-block;
+  margin-bottom: 2rem;
+
+  width: 100%;
+
+  @include breakpoint('phablet') {
+    width: 49%;
+  }
+
+  @include breakpoint('desktop') {
+    width: 24%;
+  }
+}

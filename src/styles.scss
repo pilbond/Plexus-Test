@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'scss/settings/_settings-colors.scss';
+@import 'scss/settings/_settings-breakpoints.scss';
+@import 'scss/tools/_tools-breakpoints.scss';
+@import 'scss/generic/_generic-reset.scss';
+@import 'scss/elements/_element-page.scss';
+@import 'scss/objects/_object-wrapper.scss';
+@import 'scss/components/material-components.scss';
+@import 'scss/components/card-component.scss';
+
+@import 'scss/components/_header.scss';
+@import 'scss/components/_main.scss';
+@import 'scss/utilities/_utilities.scss';

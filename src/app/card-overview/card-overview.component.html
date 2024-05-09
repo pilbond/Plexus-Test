@@ -1,0 +1,40 @@
+<mat-card 
+  class="city-card" 
+  [class.city-card--expanded]="expanded">
+
+    <mat-card-header 
+      class="city-card__header" 
+      role="img"
+      [attr.aria-label]="city + ' image'"
+      [style.backgroundImage]="'url(' + image + ')'">
+    </mat-card-header>
+
+    <mat-card-content>
+        <div class="city-card__info flex">
+            <h2 class="city-card__title">
+                {{city}}
+            </h2>
+
+            <div class="city-card__stars flex flex-row-reverse"
+              aria-label="Rating">
+                <div *ngFor="let star of [1, 2, 3, 4, 5];" 
+                      class="city-card__star" 
+                      [class.selected]="star + 1 === rating">
+                </div>
+            </div>                
+       </div>    
+
+      <div class="city-card__text">
+        {{text}}
+      </div>
+
+      <button 
+        (click)="toggleText()"
+        mat-icon-button
+        class="city-card__icon"          
+        [attr.aria-label]="expanded ? 'Collapse text' : 'Expand text'">
+        <mat-icon>expand_more</mat-icon>
+      </button>
+
+    </mat-card-content>
+</mat-card>
